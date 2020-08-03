@@ -7,6 +7,13 @@ const initState = {
 };
 
 const cardReducer = (state = initState, action) => {
+    switch (action.type) {
+        case 'CREATE_CARD':
+            console.log('created card', action.card);
+            break;
+        default:
+            console.log('sup default case');
+    }
     return state
 };
 

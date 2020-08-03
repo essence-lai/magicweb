@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createCard } from '../../store/actions/cardActions';
 
 class CreateCard extends Component {
     state = {
@@ -14,7 +16,8 @@ class CreateCard extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        //console.log(this.state);
+        this.props.createCard(this.state);
     };
 
     render() {
@@ -24,8 +27,8 @@ class CreateCard extends Component {
                     <h5 className="grey-text text-darken-3">Add Card</h5>
 
                     <div className="input-field">
-                        <label htmlFor="email">Card Namne</label>
-                        <input type="text" id="name" onChange={this.handleChange}/>
+                        <label htmlFor="email">Card Name</label>
+                        <input type="text" id="title" onChange={this.handleChange}/>
                     </div>
 
                     <div className="input-field">
@@ -42,4 +45,9 @@ class CreateCard extends Component {
     }
 }
 
-export default CreateCard;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createCard: (card) => dispatch(createCard(card))
+    }
+};
+export default connect(null, mapDispatchToProps)(CreateCard);
