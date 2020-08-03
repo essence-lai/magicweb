@@ -1,22 +1,47 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 const CardDetails = (props) => {
-    const id = props.match.params.id;
-    return (
-        <div className="container section card-details">
-            <div className="card z-depth-0">
-                <div className="card-content">
-                    <span className="card-title">Card Title - { id }</span>
-                    <p>BLAH BLAH BLAH BLAHC</p>
-                </div>
+    const { card } = props;
 
-                <div className="card-action grey lighten-4 grey-text">
-                    <div>Stuff about the card</div>
-                    <div> mana cost</div>
+    if(card) {
+        return (
+            <div className="container section card-details">
+                <div className="card z-depth-0">
+                    <div className="card-content">
+                        <span className="card-title">{ card.title}</span>
+                        <p>{ card.content }</p>
+                        <p>Quantity: { card.quantity }</p>
+                    </div>
+
+                    <div className="card-action grey lighten-4 grey-text">
+                        <div>Posted by {card.authorFirstName} {card.authorLastName}</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div className="container center">
+                <p>Loading Card...</p>
+            </div>
+        )
+    }
+};
+const mapStateToProps = (state, ownProps) => {
+    const id = ownProps.match.params.id,
+        cards = state.firestore.data.cards,
+        card = cards ? cards[id] : null;
+    return {
+        card: card
+    }
 };
 
-export default CardDetails;
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'cards' }
+    ])
+)(CardDetails);

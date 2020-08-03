@@ -5,7 +5,8 @@ import { createCard } from '../../store/actions/cardActions';
 class CreateCard extends Component {
     state = {
         title: '',
-        content: ''
+        content: '',
+        quantity: 0,
     };
 
     handleChange = (e) => {
@@ -34,6 +35,11 @@ class CreateCard extends Component {
                     <div className="input-field">
                         <label htmlFor="email">Details</label>
                         <textarea id="content" className="materialize-textarea " onChange={this.handleChange}/>
+                    </div>
+
+                    <div className="input-field">
+                        <label htmlFor="email">Quantity</label>
+                        <input type="number" id="quantity" onChange={this.handleChange}/>
                     </div>
 
                     <div className="input-field">

@@ -1,12 +1,17 @@
 import React from 'react';
 import CardSummary from './CardSummary';
+import { Link } from 'react-router-dom';
 
 const CardList = ({cards}) => {
     return (
         <div className="card-list section">
             <div className="card z-depth-0 card-summary">
                 { cards && cards.map(card => {
-                    return <CardSummary card={card} key={card.id}/>
+                    return (
+                        <Link to={'/card/' + card.id }>
+                            <CardSummary card={card} key={ card.id }/>
+                        </Link>
+                    )
                 })}
             </div>
         </div>
