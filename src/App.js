@@ -4,7 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import CardDetails from './components/card/CardDetails';
 import SignIn from './components/auth/SignIn';
-import SignUp from './components/auth/SignUp';
+//import SignUp from './components/auth/SignUp';
 import CreateCard from './components/card/CreateCard';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
                 <Route exact path='/' component={Dashboard}/>
                 <Route path='/card/:id' component={CardDetails}/>
                 <Route path='/signin' component={SignIn}/>
-                <Route path='/signup' component={SignUp}/>
+                {/*<Route path='/signup' component={SignUp}/>*/}
                 <Route path='/create' component={CreateCard}/>
             </Switch>
           </div>
