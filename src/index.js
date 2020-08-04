@@ -18,17 +18,23 @@ const store = createStore(rootReducer, compose(
     )
 );
 
+const profileSpecificProps = {
+    userProfile: 'users',
+    useFirestoreForProfile: true,
+    enableRedirectHandling: false,
+    resetBeforeLogin: false
+};
+
 const rrfProps = {
     firebase,
-    config: fbConfig,
+    config: { ...fbConfig, ...profileSpecificProps },
     dispatch: store.dispatch,
     createFirestoreInstance
 };
 
 function AuthIsLoaded({children}) {
     const auth = useSelector(state => state.firebase.auth);
-    if(!isLoaded(auth)) return <body>
-            <div className="preloader-wrapper big active loader">
+    if(!isLoaded(auth)) return <div className="preloader-wrapper big active loader">
                 <div className="spinner-layer spinner-blue">
                     <div className="circle-clipper left">
                         <div className="circle"></div>
@@ -40,8 +46,7 @@ function AuthIsLoaded({children}) {
                         <div className="circle"></div>
                     </div>
                 </div>
-            </div>
-        </body>;
+            </div>;
     return children
 }
 ReactDOM.render(
