@@ -2,9 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Redirect } from 'react-router-dom';
+
 
 const CardDetails = (props) => {
-    const { card } = props;
+    const { card, auth } = props;
+
+    if(!auth.uid) return <Redirect to='/signin'/>;
 
     if(card) {
         return (
@@ -35,7 +39,8 @@ const mapStateToProps = (state, ownProps) => {
         cards = state.firestore.data.cards,
         card = cards ? cards[id] : null;
     return {
-        card: card
+        card: card,
+        auth: state.firebase.auth
     }
 };
 

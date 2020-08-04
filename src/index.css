@@ -33,3 +33,12 @@ textarea.materialize-textarea:focus:not([readonly]){
   border-color: #ec407a;
   box-shadow: none;
 }
+
+.loader {
+  position: absolute;
+  top :0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
