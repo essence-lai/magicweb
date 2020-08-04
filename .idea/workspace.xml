@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/config/fbConfig.js" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="4a0ea290-b6e6-4e78-8a4c-034b8c2ba1e3" name="Default" comment="creating store + reducers">
       <change afterPath="$PROJECT_DIR$/src/config/fbConfig.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CardSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CardSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/card/CreateCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/card/CreateCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/layout/SignedInLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/SignedInLinks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/authActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/authActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/authReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/authReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/cardActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/cardActions.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,23 +26,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CardList.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/components/card/CardList.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="rootReducer.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/store/reducers/rootReducer.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="234">
-                  <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+                  <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -50,7 +42,7 @@
             <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="432">
-                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -58,14 +50,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Navbar.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Navbar.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/layout/Navbar.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+                <state relative-caret-position="342">
+                  <caret line="19" selection-start-line="19" selection-end-line="19" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cardActions.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/store/actions/cardActions.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="21" selection-start-line="21" selection-end-line="21" />
                 </state>
               </provider>
             </entry>
@@ -82,11 +83,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CardDetails.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="CardDetails.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/card/CardDetails.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+                <state relative-caret-position="450">
+                  <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -107,7 +108,7 @@
             <entry file="file://$PROJECT_DIR$/src/components/card/CreateCard.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="252">
-                  <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-end-line="27" />
+                  <caret line="27" column="34" selection-start-line="27" selection-end-line="28" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -131,7 +132,7 @@
             <entry file="file://$PROJECT_DIR$/src/store/reducers/authReducer.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="501">
-                  <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+                  <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -143,8 +144,8 @@
           <file leaf-file-name="CreateCard.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/card/CreateCard.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-162">
-                  <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+                <state relative-caret-position="396">
+                  <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -164,6 +165,18 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="CardList.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/components/card/CardList.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="authActions.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/store/actions/authActions.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -173,11 +186,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="SignedInLinks.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="SignedInLinks.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/components/layout/SignedInLinks.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="10" column="101" selection-start-line="10" selection-start-column="101" selection-end-line="10" selection-end-column="101" />
+                <state relative-caret-position="144">
+                  <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CardSummary.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/components/card/CardSummary.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="11" column="61" selection-start-line="11" selection-end-line="12" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -209,22 +234,22 @@
         <option value="$PROJECT_DIR$/src/components/layout/SignedOutLinks.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/store/reducers/cardReducer.js" />
-        <option value="$PROJECT_DIR$/src/store/actions/cardActions.js" />
         <option value="$PROJECT_DIR$/src/config/fbConfig.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CardSummary.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/rooterReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CardList.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/dashboard/Dashboard.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CreateCard.js" />
-        <option value="$PROJECT_DIR$/src/components/card/CardDetails.js" />
         <option value="$PROJECT_DIR$/src/components/auth/SignIn.js" />
         <option value="$PROJECT_DIR$/src/store/actions/authActions.js" />
         <option value="$PROJECT_DIR$/src/store/reducers/authReducer.js" />
         <option value="$PROJECT_DIR$/src/components/auth/SignUp.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/layout/Navbar.js" />
+        <option value="$PROJECT_DIR$/src/store/actions/cardActions.js" />
         <option value="$PROJECT_DIR$/src/components/layout/SignedInLinks.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CreateCard.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CardList.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CardSummary.js" />
+        <option value="$PROJECT_DIR$/src/components/card/CardDetails.js" />
       </list>
     </option>
   </component>
@@ -416,7 +441,7 @@
       <option name="presentableId" value="Default" />
       <updated>1596407669152</updated>
       <workItem from="1596407670942" duration="8368000" />
-      <workItem from="1596484193847" duration="13841000" />
+      <workItem from="1596484193847" duration="15084000" />
     </task>
     <task id="LOCAL-00001" summary="basic router">
       <created>1596415299776</created>
@@ -460,11 +485,18 @@
       <option name="project" value="LOCAL" />
       <updated>1596505703280</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create user">
+      <created>1596507120153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1596507120153</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22209000" />
+    <option name="totallyTimeSpent" value="23452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -546,7 +578,8 @@
     <MESSAGE value="firbase set up" />
     <MESSAGE value="card collection init" />
     <MESSAGE value="route guard" />
-    <option name="LAST_COMMIT_MESSAGE" value="route guard" />
+    <MESSAGE value="create user" />
+    <option name="LAST_COMMIT_MESSAGE" value="create user" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.js">
@@ -690,13 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/actions/cardActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/cardReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -714,27 +740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardSummary.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/reducers/rootReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -751,27 +760,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/dashboard/Dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CardDetails.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/card/CreateCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -791,7 +780,7 @@
     <entry file="file://$PROJECT_DIR$/src/store/reducers/authReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
-          <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -824,18 +813,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/layout/Navbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+        <state relative-caret-position="342">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CreateCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="27" column="34" selection-start-line="27" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/layout/SignedInLinks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="101" selection-start-line="10" selection-start-column="101" selection-end-line="10" selection-end-column="101" />
+        <state relative-caret-position="144">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardSummary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="61" selection-start-line="11" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/actions/cardActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/CardDetails.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

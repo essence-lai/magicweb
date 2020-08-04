@@ -20,6 +20,7 @@ class CreateCard extends Component {
         e.preventDefault();
         //console.log(this.state);
         this.props.createCard(this.state);
+        this.props.history.push('/');
     };
 
     render() {
