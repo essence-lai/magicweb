@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { createCard } from '../../store/actions/cardActions';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import _ from 'lodash';
 
 class CreateCard extends Component {
     state = {
@@ -21,9 +22,9 @@ class CreateCard extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        //console.log(this.state);
-        //this.props.createCard(this.state);
-        //this.props.history.push('/');
+        console.log(this.state);
+        this.props.createCard(this.state.checkout);
+        this.props.history.push('/');
     };
 
     searchCard = (e) => {
@@ -43,9 +44,40 @@ class CreateCard extends Component {
     };
 
     addToCheckout = (item) => {
-        this.setState({
-            checkout: [...this.state.checkout, item]
-        });
+        const newItem = _.pick(item, [ 'id', 'name', 'cmc', 'color_identity', 'colors', 'flavor_text', 'image_uris', 'keywords', 'legalities', 'mana_cost', 'oracle_text', 'power', 'prices', 'toughness', 'set_name', 'set_type', 'type_line', 'rarity' ]),
+            existingItem = _.find(this.state.checkout, function (item) { return item.id === newItem.id });
+
+        if (existingItem) {
+            const index = _.findIndex(this.state.checkout, function (item) { return item.id === newItem.id });
+            existingItem.quantity += 1;
+            console.log(existingItem);
+
+            this.setState({
+                checkout: [ ...this.state.checkout.slice(0, index), existingItem, ...this.state.checkout.slice(index + 1) ]
+            });
+
+        } else {
+            this.setState({
+                checkout: [ ...this.state.checkout, { ...newItem, quantity: 1 }]
+            });
+        }
+    };
+
+    removeCard = (item) => {
+        const index = _.findIndex(this.state.checkout, function (card) { return card.id === item.id});
+
+        if (item.quantity > 1) {
+            item.quantity -= 1;
+
+            this.setState({
+                checkout: [...this.state.checkout.slice(0, index), item, ...this.state.checkout.slice(index + 1) ]
+            });
+
+        } else {
+            this.setState({
+                checkout: [...this.state.checkout.slice(0, index), ...this.state.checkout.slice(index + 1) ]
+            });
+        }
     };
 
     render() {
@@ -84,16 +116,32 @@ class CreateCard extends Component {
                         </div>
 
                     </div>
-                    <div className="col s2">
-                        <h5 className="grey-text text-darken-3">Check out</h5>
-                        { this.state.checkout && this.state.checkout.map(item => {
-                            return (
-                                <div key={item.id}>
-                                    { item.name }
-                                </div>
+                    <div className="col s12 m3">
+                        <div className="row">
+                            <div className="col s12 center-row">
+                                <h5 className="grey-text text-darken-3 col s8">Check out</h5>
+                                <button className="btn waves-effect lighten-1 z-depth-0 col s5" onClick={this.handleSubmit}>Submit</button>
+                            </div>
 
-                            )
-                        })}
+                            { this.state.checkout && this.state.checkout.map(item => {
+                                return (
+                                    <div className="col s12 margin-top center-row" key={ item.id }>
+                                        <div className="col s7">
+                                            { item.name }
+                                        </div>
+
+                                        <div className="col s3">
+                                            x { item.quantity }
+                                        </div>
+
+                                        <div className="col s2">
+                                            <button className="btn-floating waves-effect red" ><i className="material-icons icons-white" onClick={ this.removeCard.bind(this, item)}>remove</i></button>
+                                        </div>
+                                    </div>
+
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
         )

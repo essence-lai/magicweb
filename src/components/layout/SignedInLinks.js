@@ -6,9 +6,9 @@ import { signOut } from '../../store/actions/authActions';
 const SignedInLinks = (props) => {
     return (
         <ul className="right">
-            <li><NavLink to='/create'>New Card</NavLink></li>
-            <li><a onClick={ props.signOut } href='/'>Log Out</a></li>
-            <li><NavLink to='/' className='btn btn-floating pink lighten-1'>{ props.profile.initials }</NavLink></li>
+            <li className="waves-effect"><NavLink to='/create'>New Card</NavLink></li>
+            <li className="waves-effect"><a onClick={ props.signOut } href='/'>Log Out</a></li>
+            <li className="waves-effect"><NavLink to='/' className='btn btn-floating pink lighten-1'>{ props.profile.initials }</NavLink></li>
         </ul>
     )
 };

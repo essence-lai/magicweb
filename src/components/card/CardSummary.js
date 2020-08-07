@@ -1,15 +1,52 @@
 import React from 'react';
-import moment from 'moment';
 
 const CardSummary = ({card}) => {
     return (
-        <div className="card z-depth-0 card-summary">
-            <div className="card-content grey-text text-darken-3">
-                <span className="card-title">{ card.title }</span>
-                <p>{ card.content }</p>
-                <p>Quantity: { card.quantity }</p>
-                <p className='grey-text'>Posted by { card.authorFirstName } { card.authorLastName }</p>
-                <p className='grey-text'>{ moment(card.createdAt.toDate()).calendar()}</p>
+        <div className="card z-depth-0 card-summary horizontal">
+            <div className="card-image">
+                <img
+                    src={ card.image_uris.small }
+                    alt={ card.image_uris.normal }
+                />
+            </div>
+            <div className="card-stacked">
+                <div className="card-content grey-text text-darken-3">
+                    <span className="card-title">{ card.name } <p className="right">Quantity: { card.quantity }</p></span>
+                    <p>{ card.oracle_text }</p>
+                </div>
+
+                <div className="card-action">
+                    <div className="row">
+
+                        <div className="col s1">
+                            CMC: { card.cmc }
+                        </div>
+
+                        <div className="col s1">
+                            Colors: { card.colors.join('/')}
+                        </div>
+
+                        <div className="col s4">
+                            Type: { card.type_line }
+                        </div>
+
+                        { card.toughness && card.power ?
+                            <div className="col s2">
+                                Power/Toughness: { card.power }/{ card.toughness }
+                            </div>
+                            :
+                            null
+                        }
+
+                        { card.keywords ?
+                            <div className="col s4">
+                                Keywords: { card.keywords.join(', ') }
+                            </div>
+                            :
+                            null
+                        }
+                    </div>
+                </div>
             </div>
         </div>
 
