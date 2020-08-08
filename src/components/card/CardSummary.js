@@ -18,20 +18,24 @@ const CardSummary = ({card}) => {
                 <div className="card-action">
                     <div className="row">
 
-                        <div className="col s1">
+                        <div className="col s12 m1">
                             CMC: { card.cmc }
                         </div>
 
-                        <div className="col s1">
+                        <div className="col s12 m1">
                             Colors: { card.colors.join('/')}
                         </div>
 
-                        <div className="col s4">
+                        <div className="col s12 m1" style={{ textTransform: 'capitalize' }}>
+                            Rarity: { card.rarity }
+                        </div>
+
+                        <div className="col s12 m3">
                             Type: { card.type_line }
                         </div>
 
                         { card.toughness && card.power ?
-                            <div className="col s2">
+                            <div className="col s12 m3">
                                 Power/Toughness: { card.power }/{ card.toughness }
                             </div>
                             :
@@ -39,7 +43,7 @@ const CardSummary = ({card}) => {
                         }
 
                         { card.keywords ?
-                            <div className="col s4">
+                            <div className="col s12 m3">
                                 Keywords: { card.keywords.join(', ') }
                             </div>
                             :

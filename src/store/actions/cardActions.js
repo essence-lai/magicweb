@@ -20,3 +20,16 @@ export const createCard = (cards) => {
         }
     }
 };
+
+export const updateCard = (card) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        // make asyc call to database
+        const firestore = getFirestore();
+
+        firestore.collection('cards').doc(card.id).update({quantity: card.quantity}).then(() => {
+            dispatch({type: 'UPDATE_CARD', card});
+        }).catch((err) => {
+            dispatch({type: 'UPDATE_CARD_ERROR', err});
+        });
+    }
+};

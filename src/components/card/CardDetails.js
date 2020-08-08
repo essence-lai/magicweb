@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
+import UpdateCard from './UpdateCard';
 
 
 const CardDetails = (props) => {
@@ -12,21 +13,28 @@ const CardDetails = (props) => {
 
     if(card) {
         return (
-            <div style={{ backgroundImage: `url(${card.image_uris.art_crop })`, backgroundSize: 'cover', height: '100vh' }}>
+            <div style={{ backgroundImage: `url(${ card.image_uris.art_crop })`, backgroundSize: 'cover', height: '100vh' }}>
                 <div className="container section card-details">
                     <div className="row">
                         <div className="col s12 m8">
                             <div className="card white">
                                 <div className="card-stacked">
                                     <div className="card-content">
-                                        <span className="card-title">{ card.name } <p className="right">Quantity: { card.quantity }</p></span>
+                                        <span className="card-title">{ card.name } <UpdateCard className="right" card={ card }/></span>
                                         <p style={{ marginTop: '40px'}}>{ card.oracle_text }</p>
 
                                         <span className="card-title" style={{ marginTop: '40px'}}>Legalities</span>
                                         <div className="row">
                                             { card.legalities && Object.entries(card.legalities).map(([key, value]) => {
                                                 return (
-                                                    <p style={{ marginTop: '20px'}} className="col s6">{key}: {value}</p>
+                                                    <div style={{ marginTop: '20px'}} className="col s6" key={key}>
+                                                        <p className="left" style={{textTransform: 'capitalize'}}>{ key }</p>
+                                                        { value === 'legal'?
+                                                            <button className="right btn green">Legal</button>
+                                                            :
+                                                            <button className="right btn disabled">Not Legal</button>
+                                                        }
+                                                    </div>
                                                 )
                                             })}
                                         </div>
@@ -50,7 +58,9 @@ const CardDetails = (props) => {
                                         <span className="card-title col s12">Prices</span>
                                         {card.prices && Object.entries(card.prices).map(([key, value]) => {
                                             return (
-                                                <p className="col s2">{key}: {value}</p>
+                                                <div className="col s2" key={key}>
+                                                    <p className="left" style={{textTransform: 'capitalize'}}>{ key } : { value }</p>
+                                                </div>
                                             )
                                         })}
                                     </div>
