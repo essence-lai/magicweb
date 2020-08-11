@@ -7,7 +7,7 @@ const colorsIncluded = ({ card, colors }) => {
     let isIncluded = 0;
 
     for (let color of colors) {
-        if(_.includes(card.colors, color)) {
+        if(_.includes(card.color_identity, color)) {
             isIncluded+= 1;
         }
     }

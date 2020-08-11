@@ -23,7 +23,7 @@ const CardSummary = ({card}) => {
                         </div>
 
                         <div className="col s12 m1">
-                            Colors: { card.colors.join('/')}
+                            Colors Identity: { card.color_identity.join('/')}
                         </div>
 
                         <div className="col s12 m1" style={{ textTransform: 'capitalize' }}>
