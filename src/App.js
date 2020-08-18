@@ -6,6 +6,8 @@ import CardDetails from './components/card/CardDetails';
 import SignIn from './components/auth/SignIn';
 //import SignUp from './components/auth/SignUp';
 import CreateCard from './components/card/CreateCard';
+import CreateDeck from './components/deck/CreateDeck';
+import DeckDashboard from './components/deck/DeckDashboard';
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
                 <Route path='/card/:id' component={CardDetails}/>
                 <Route path='/signin' component={SignIn}/>
                 {/*<Route path='/signup' component={SignUp}/>*/}
-                <Route path='/create' component={CreateCard}/>
+                <Route path='/createcard' component={CreateCard}/>
+                <Route path='/createdeck' component={CreateDeck}/>
+                <Route path='/decks' component={DeckDashboard}/>
             </Switch>
           </div>
       </BrowserRouter>
