@@ -8,6 +8,7 @@ import SignIn from './components/auth/SignIn';
 import CreateCard from './components/card/CreateCard';
 import CreateDeck from './components/deck/CreateDeck';
 import DeckDashboard from './components/deck/DeckDashboard';
+import DeckDetails from './components/deck/DeckDetails';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/createcard' component={CreateCard}/>
                 <Route path='/createdeck' component={CreateDeck}/>
                 <Route path='/decks' component={DeckDashboard}/>
+                <Route path='/deck/:id' component={DeckDetails}/>
             </Switch>
           </div>
       </BrowserRouter>
