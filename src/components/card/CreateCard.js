@@ -21,8 +21,6 @@ class CreateCard extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log(this.state);
         this.props.createCard(this.state.checkout);
         this.props.history.push('/');
     };
@@ -50,7 +48,6 @@ class CreateCard extends Component {
         if (existingItem) {
             const index = _.findIndex(this.state.checkout, function (item) { return item.id === newItem.id });
             existingItem.quantity += 1;
-            console.log(existingItem);
 
             this.setState({
                 checkout: [ ...this.state.checkout.slice(0, index), existingItem, ...this.state.checkout.slice(index + 1) ]

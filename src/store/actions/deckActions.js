@@ -26,7 +26,7 @@ export const updateDeck = (deck) => {
         // make asyc call to database
         const firestore = getFirestore();
 
-        firestore.collection('decks').doc(deck.id).update({name: deck.name, commander: deck.commander}).then(() => {
+        firestore.collection('decks').doc(deck.id).update({name: deck.name}).then(() => {
             dispatch({type: 'UPDATE_DECK', deck});
         }).catch((err) => {
             dispatch({type: 'UPDATE_DECK', err});

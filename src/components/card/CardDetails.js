@@ -80,7 +80,6 @@ const CardDetails = (props) => {
     }
 };
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
     const id = ownProps.match.params.id,
         cards = state.firestore.data.cards,
         card = cards ? cards[id] : null;
